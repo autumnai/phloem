@@ -33,7 +33,6 @@ impl <T> Blob<T> {
         let mut new_capacity = 1;
 
         for dimension in &new_shape {
-            // not sure if dimension is a fitting description
             new_capacity *= *dimension;
         }
         self.shape = new_shape;
