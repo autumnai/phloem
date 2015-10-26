@@ -6,6 +6,8 @@ rust:
 - stable
 matrix:
   allow_failures:
+    - beta
+    - stable
 before_script:
 - |
   pip install 'travis-cargo<0.2' --user &&
