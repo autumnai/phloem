@@ -18,4 +18,10 @@ mod blod_spec {
         assert_eq!(12, blob.cpu_data().capacity());
     }
 
+    #[test]
+    fn shape_string() {
+        let shape = vec![2, 3, 2];
+        let blob: Blob<f32> = Blob::of_shape(shape);
+        assert_eq!("2 3 2 (3)", blob.shape_string());
+    }
 }

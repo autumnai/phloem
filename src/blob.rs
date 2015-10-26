@@ -42,6 +42,19 @@ impl <T> Blob<T> {
         }
     }
 
+    /// Returns a String representation of the Blobs' `shape`
+    ///
+    /// The first numbers represent the size of the dimension.
+    /// The last number in brackets defines the dimensionality of the Blob.
+    pub fn shape_string(&self) -> String {
+        let mut string: String = "".to_owned();
+        for dim in self.shape.clone() {
+            string.push_str(&format!("{} ", &dim.to_string()));
+        }
+        string.push_str(&format!("({})", self.shape.len().to_string()));
+        string
+    }
+
     /// Returns the length of the Blob data
     pub fn len(&self) -> usize {
         self.data.len()
