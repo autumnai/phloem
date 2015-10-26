@@ -33,7 +33,6 @@ impl <T> Blob<T> {
         let mut new_capacity = 1;
 
         for dimension in &new_shape {
-            // not sure if dimension is a fitting description
             new_capacity *= *dimension;
         }
         self.shape = new_shape;
@@ -41,6 +40,19 @@ impl <T> Blob<T> {
             self.data = Vec::with_capacity(new_capacity as usize);
             self.diff = Vec::with_capacity(new_capacity as usize);
         }
+    }
+
+    /// Returns a String representation of the Blobs' `shape`
+    ///
+    /// The first numbers represent the size of the dimension.
+    /// The last number in brackets defines the dimensionality of the Blob.
+    pub fn shape_string(&self) -> String {
+        let mut string: String = "".to_owned();
+        for dim in self.shape.clone() {
+            string.push_str(&format!("{} ", &dim.to_string()));
+        }
+        string.push_str(&format!("({})", self.shape.len().to_string()));
+        string
     }
 
     /// Returns the length of the Blob data
