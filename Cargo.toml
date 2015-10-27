@@ -1,13 +1,13 @@
 [package]
 name = "phloem"
-description = "Blobs for Machine Learning"
+description = "Blob for Machine Learning"
 version = "0.1.0"
 authors = ["Michael Hirn <mj@autumnai.com>"]
 repository = "https://github.com/autumnai/phloem"
 homepage = "https://github.com/autumnai/phloem"
 documentation = "http://autumnai.github.io/phloem"
 readme = "README.md"
-keywords = ["machine learning", "blob", "data"]
+keywords = ["machine-learning", "neural-network", "blob", "data"]
 license = "MIT"
 
 [dependencies]
