@@ -4,21 +4,21 @@
 
 #[derive(Debug)]
 /// The Container for the `data` Vec, its `diff` and its `shape` dimensions
-pub struct Blob<T> {
-    data: Vec<T>,
-    diff: Vec<T>,
+pub struct Blob {
+    data: Vec<isize>,
+    diff: Vec<isize>,
     shape: Vec<isize>
 }
 
-impl <T> Blob<T> {
+impl Blob {
 
     /// Creates a new Blob
-    pub fn new() -> Blob<T> {
+    pub fn new() -> Blob {
         Blob::of_shape(vec![0])
     }
 
     /// Creates a new Blob with specified `shape`
-    pub fn of_shape(new_shape: Vec<isize>) -> Blob<T> {
+    pub fn of_shape(new_shape: Vec<isize>) -> Blob {
         let mut blob = Blob {
             data: vec![],
             diff: vec![],
@@ -66,22 +66,22 @@ impl <T> Blob<T> {
     }
 
     /// Returns a pointer to the data of the Blob
-    pub fn cpu_data(&self) -> &Vec<T> {
+    pub fn cpu_data(&self) -> &Vec<isize> {
         &self.data
     }
 
     /// Returns a mutable pointer to the data of the Blob
-    pub fn mutable_cpu_data(&mut self) -> &mut Vec<T> {
+    pub fn mutable_cpu_data(&mut self) -> &mut Vec<isize> {
         &mut self.data
     }
 
     /// Returns a pointer to the diff of the Blob
-    pub fn cpu_diff(&self) -> &Vec<T> {
+    pub fn cpu_diff(&self) -> &Vec<isize> {
         &self.diff
     }
 
     /// Returns a mutable pointer to the diff of the Blob
-    pub fn mutable_cpu_diff(&mut self) -> &mut Vec<T> {
+    pub fn mutable_cpu_diff(&mut self) -> &mut Vec<isize> {
         &mut self.diff
     }
 }
