@@ -10,5 +10,9 @@
 //! This might be used with the Rust Machine Learning Framework
 //! [leaf](https://github.com/autumnai/leaf)
 pub use blob::Blob;
+pub use numeric::Numeric;
 
+/// The Blob
 pub mod blob;
+/// The Numeric Value Trait
+pub mod numeric;
