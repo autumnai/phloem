@@ -8,7 +8,7 @@ use Numeric;
 pub struct Blob<T: Numeric> {
     data: Vec<T>,
     diff: Vec<T>,
-    shape: Vec<isize>
+    shape: Vec<isize>,
 }
 
 impl <T> Blob<T> where T: Numeric {
@@ -43,6 +43,11 @@ impl <T> Blob<T> where T: Numeric {
         }
     }
 
+    /// Returns the shape of the Blob
+    pub fn shape(&self) -> Vec<isize> {
+        self.shape.clone()
+    }
+
     /// Returns a String representation of the Blobs' `shape`
     ///
     /// The first numbers represent the size of the dimension.
@@ -64,6 +69,11 @@ impl <T> Blob<T> where T: Numeric {
     /// Returns a boolean value whether the Blobs' data is empty or not
     pub fn is_empty(&self) -> bool {
         self.data.len() == 0
+    }
+
+    /// Returns the allocated capacity of the Blob data.
+    pub fn capacity(&self) -> usize {
+        self.data.capacity()
     }
 
     /// Returns a pointer to the data of the Blob
