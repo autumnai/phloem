@@ -34,4 +34,28 @@ mod blod_spec {
         let blob: Blob<f32> = Blob::of_shape(shape);
         assert_eq!("2 3 2 (3)", blob.shape_string());
     }
+
+    #[test]
+    fn correct_len() {
+        let shape = vec![2, 3, 2];
+        let mut blob: Blob<f32> = Blob::of_shape(shape);
+        assert_eq!(0, blob.len());
+
+        blob.mutable_cpu_data().push(0f32);
+        assert_eq!(1, blob.len());
+    }
+
+    #[test]
+    fn correct_capacity() {
+        let shape = vec![2, 2, 2, 2];
+        let blob: Blob<f32> = Blob::of_shape(shape);
+        assert_eq!(16, blob.capacity());
+    }
+
+    #[test]
+    fn correct_shape() {
+        let shape = vec![2, 3, 4];
+        let blob: Blob<f32> = Blob::of_shape(shape);
+        assert_eq!(vec![2, 3, 4], blob.shape());
+    }
 }
