@@ -8,7 +8,7 @@ use Numeric;
 pub struct Blob<T: Numeric> {
     data: Vec<T>,
     diff: Vec<T>,
-    shape: Vec<isize>,
+    shape: Vec<usize>,
 }
 
 impl <T> Blob<T> where T: Numeric {
@@ -19,7 +19,7 @@ impl <T> Blob<T> where T: Numeric {
     }
 
     /// Creates a new Blob with specified `shape`
-    pub fn of_shape(new_shape: Vec<isize>) -> Blob<T> {
+    pub fn of_shape(new_shape: Vec<usize>) -> Blob<T> {
         let mut blob = Blob {
             data: vec![],
             diff: vec![],
@@ -30,21 +30,21 @@ impl <T> Blob<T> where T: Numeric {
     }
 
     /// Reshapes the Blob to the new `shape` given
-    pub fn reshape(&mut self, new_shape: Vec<isize>) {
+    pub fn reshape(&mut self, new_shape: Vec<usize>) {
         let mut new_capacity = 1;
 
         for dimension in &new_shape {
             new_capacity *= *dimension;
         }
         self.shape = new_shape;
-        if new_capacity > self.data.capacity() as isize {
-            self.data = Vec::with_capacity(new_capacity as usize);
-            self.diff = Vec::with_capacity(new_capacity as usize);
+        if new_capacity > self.data.capacity() {
+            self.data = Vec::with_capacity(new_capacity);
+            self.diff = Vec::with_capacity(new_capacity);
         }
     }
 
     /// Returns the shape of the Blob
-    pub fn shape(&self) -> Vec<isize> {
+    pub fn shape(&self) -> Vec<usize> {
         self.shape.clone()
     }
 
