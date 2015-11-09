@@ -1,6 +1,14 @@
-/// The Numeric Trait
+//! Provides the trait for a valid [Blob] input
+//! [blob]: ../blob/index.html
+//!
+//! Needs to be implemented by all (primitive) types that are allowed for Blobs' data and diff
+//! value. Supported by default are the `f32` and the `f64` type.
+
+/// Provides the trait for a valid [Blob] input
+/// [blob]: ../blob/index.html
 ///
-/// Gets implemented by all primitive types that are allowed for `Blob`s' data Vec value.
+/// Needs to be implemented by all (primitive) types that are allowed for Blobs' data and diff
+/// value.
 pub trait Numeric {}
 
 impl Numeric for f32 {}

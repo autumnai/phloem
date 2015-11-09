@@ -1,10 +1,31 @@
-//! The Blob
+//! Provides the backend-agnostic data container.
 //!
-//! Stores `data`, `diff` and the dimensions of the Blob.
+//! This is the main module of Phloem and probably the reason, why you are using or interested in
+//! this library.
+//!
+//! ## Overview
+//!
+//! The [main overview][overview] of the library gives a overview, to which I will just link here.
+//! [overview]: ../index.html
+//!
+//! ## Opinions
+//!
+//! As Phloems' Blob is hihgly opinionated for the use in a machine learning scenario, it has some
+//! restrictions and designs decisions. The following two are the most important.
+//!
+//! * __diff__:<br/>
+//! Beside the fields data and shape, the Blob also has a field diff, which stores the gradients
+//! that the network might compute over the data stored in the data field.
+//!
+//! * __Numeric__:<br/>
+//! As only numeric values can be processed by a Network, the type of the data that the Blob can
+//! store is restricted to the type [Numeric][numeric], which is implemented for `f32` and `f64`.
+//!
+//! [numeric]: ../numeric/index.html
 use Numeric;
 
 #[derive(Debug)]
-/// The Container for the `data` Vec, its `diff` and its `shape` dimensions
+/// Backend-agnostic data container.
 pub struct Blob<T: Numeric> {
     data: Vec<T>,
     diff: Vec<T>,
