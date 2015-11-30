@@ -6,9 +6,7 @@
 //! ## Overview
 //!
 //! Mathematically speaking, a blob is an N-dimensional array stored in a C-contiguous fashion.
-//! Ploems' Blob uses [Arrayfire][arrayfire] as the backend abstraction, which currently restricts
-//! the Blob to be a 4-dimensional array at most. Time will show if this is a severe
-//! limitation.<br/>
+//! Ploems' Blob uses [Collenchyma][collenchyma] as the backend abstraction.
 //! The advantages of Phloems' Blob is a unified memory interface for data that hides the
 //! computational and mental overhead of mixed CPU/GPU operations by synchronizing from the host
 //! (CPU) to the device (GPU) as needed.
@@ -16,17 +14,18 @@
 //! As Phloems' Blob was developed for use in machine learning scenarios, the Blob is opinionated
 //! about its application. For more information about how exactly, see the Blob module.
 //!
-//! [arrayfire]: https://github.com/arrayfire/arrayfire
-#![feature(plugin)]
-#![plugin(clippy)]
+//! [collenchyma] https://github.com/autumnai/collenchyma
+#![cfg_attr(lint, feature(plugin))]
+#![cfg_attr(lint, plugin(clippy))]
+#![feature(clone_from_slice)]
 #![allow(dead_code)]
 #![deny(missing_docs,
         missing_debug_implementations, missing_copy_implementations,
         trivial_casts, trivial_numeric_casts,
         unsafe_code, unused_import_braces, unused_qualifications)]
 
+extern crate collenchyma as co;
+
 pub use blob::Blob;
-pub use numeric::Numeric;
 
 pub mod blob;
-pub mod numeric;

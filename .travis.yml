@@ -6,8 +6,15 @@ rust:
 - stable
 matrix:
   allow_failures:
-  - rust: beta
-  - rust: stable
+    - rust: beta
+    - rust: stable
+    - rust: nightly
+      env: TRAVIS_CARGO_NIGHTLY_FEATURE=lint
+  exclude:
+    - rust: beta
+      env: TRAVIS_CARGO_NIGHTLY_FEATURE=lint
+    - rust: stable
+      env: TRAVIS_CARGO_NIGHTLY_FEATURE=lint
 before_script:
 - |
   pip install 'travis-cargo<0.2' --user &&
@@ -24,6 +31,7 @@ addons:
     - libcurl4-openssl-dev
     - libelf-dev
     - libdw-dev
+    - libblas-dev
 after_success:
 - travis-cargo doc-upload
 - travis-cargo coveralls --no-sudo
@@ -32,5 +40,7 @@ notifications:
     on_success: never
 env:
   global:
-  - TRAVIS_CARGO_NIGHTLY_FEATURE=dev
   - secure: R9aFhPFmmN80z4T2e6ZqokFb5GIU0W5iUv9ZlMLMdBVD44+fZoedsHftyHR6/geq2I6fQli20KJrBa4UlXlFkpwKH6gzezPp9v5rj1lsfWkfyDpmBIzA9rVpZxehlBV0MhgzbSSbfnplMFhwxNrg9vQGMVFmx9dAF7/vNXdE2idQRjwITzk/0iKvzCKBpf+9p0mMAUc07ZJbspc1x+7Zu5zBTsUgZAKC2+qW8v04MhS63hNDzuTj+APXRcnEvIUAH1dGxPM/Ribro3QTQMJgqzUNCnXXppXB7dsopmQfk0xLXpm05nvEzvFLx8H14yPouufShaW6//w2EeEYPDKJ6HmxXKnm9+r+QoZokPNzsKuIsE5w6MqSIvUDytQYQkMT5o7Zou4a4vgfUswvu0xqJEXpMFarnHRcbHLMoQYlenTA526hYPzo8i9Zui9Qij6GbDeo1Woi8CfQSdnz7AkV0rwSmHMZcdDKRf+75meXegxjwNaNAGCyjs2D8kczi4yw8wmbPLtnzSVtswvconsctYYIAhgPLc5f5XC2oF12qi+f3NGzWVH1fb9DC0/hUkUzw3cjQ4v8Rb3kTllq77pN6dpCnAJS8ZG9ZV1GkgHZkcZTLkb/Nuxdx5Ec80L71IsKlsdr+fHz3l82QxwgTLWeUkBiL0f+ey216SEwMaOrDdg=
+  matrix:
+    - TRAVIS_CARGO_NIGHTLY_FEATURE=dev
+    - TRAVIS_CARGO_NIGHTLY_FEATURE=lint
