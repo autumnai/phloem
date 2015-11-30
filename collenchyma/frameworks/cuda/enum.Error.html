@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Error` enum in crate `collenchyma`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Error">
+
+    <title>collenchyma::frameworks::cuda::Error - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>collenchyma</a>::<wbr><a href='../index.html'>frameworks</a>::<wbr><a href='index.html'>cuda</a></p><script>window.sidebarCurrent = {name: 'Error', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../../index.html'>collenchyma</a>::<wbr><a href='../index.html'>frameworks</a>::<wbr><a href='index.html'>cuda</a>::<wbr><a class='enum' href=''>Error</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-3138' class='srclink' href='../../../src/collenchyma/frameworks/cuda/api/error.rs.html#7-48' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Error {
+    InvalidPlatform(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidDevice(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidDeviceType(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidContext(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidMemObject(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidCommandQueue(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidEventWaitList(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidValue(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidProperty(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidOperation(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidBufferSize(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    InvalidHostPtr(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    DeviceNotFound(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    DeviceNotAvailable(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    MemObjectAllocationFailure(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    MisalignedSubBufferOffset(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    ExecStatusErrorForEventsInWaitList(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    OutOfResources(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    OutOfHostMemory(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    Other(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+}</pre><div class='docblock'><p>Defines OpenCL errors.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.InvalidPlatform'><code>InvalidPlatform</code></td><td><div class='docblock'><p>Failure with provided platform.</p>
+</div></td></tr><tr><td id='variant.InvalidDevice'><code>InvalidDevice</code></td><td><div class='docblock'><p>Failure with provided device param.</p>
+</div></td></tr><tr><td id='variant.InvalidDeviceType'><code>InvalidDeviceType</code></td><td><div class='docblock'><p>Failure with provided platform.</p>
+</div></td></tr><tr><td id='variant.InvalidContext'><code>InvalidContext</code></td><td><div class='docblock'><p>Failure with provided context.</p>
+</div></td></tr><tr><td id='variant.InvalidMemObject'><code>InvalidMemObject</code></td><td><div class='docblock'><p>Failure with provided memory object.</p>
+</div></td></tr><tr><td id='variant.InvalidCommandQueue'><code>InvalidCommandQueue</code></td><td><div class='docblock'><p>Failure with provided command queue.</p>
+</div></td></tr><tr><td id='variant.InvalidEventWaitList'><code>InvalidEventWaitList</code></td><td><div class='docblock'><p>Failure with provided event list.</p>
+</div></td></tr><tr><td id='variant.InvalidValue'><code>InvalidValue</code></td><td><div class='docblock'><p>Failure with provided param(s).</p>
+</div></td></tr><tr><td id='variant.InvalidProperty'><code>InvalidProperty</code></td><td><div class='docblock'><p>Failure with provided property param.</p>
+</div></td></tr><tr><td id='variant.InvalidOperation'><code>InvalidOperation</code></td><td><div class='docblock'><p>Failure with provided operation param.</p>
+</div></td></tr><tr><td id='variant.InvalidBufferSize'><code>InvalidBufferSize</code></td><td><div class='docblock'><p>Failure with provided buffer size.</p>
+</div></td></tr><tr><td id='variant.InvalidHostPtr'><code>InvalidHostPtr</code></td><td><div class='docblock'><p>Failure with provided host pointer.</p>
+</div></td></tr><tr><td id='variant.DeviceNotFound'><code>DeviceNotFound</code></td><td><div class='docblock'><p>Failure with device availability.</p>
+</div></td></tr><tr><td id='variant.DeviceNotAvailable'><code>DeviceNotAvailable</code></td><td><div class='docblock'><p>Failure with device availability.</p>
+</div></td></tr><tr><td id='variant.MemObjectAllocationFailure'><code>MemObjectAllocationFailure</code></td><td><div class='docblock'><p>Failure to allocate memory.</p>
+</div></td></tr><tr><td id='variant.MisalignedSubBufferOffset'><code>MisalignedSubBufferOffset</code></td><td><div class='docblock'><p>Failure with sub buffer offset.</p>
+</div></td></tr><tr><td id='variant.ExecStatusErrorForEventsInWaitList'><code>ExecStatusErrorForEventsInWaitList</code></td><td><div class='docblock'><p>Failure with events in wait list.</p>
+</div></td></tr><tr><td id='variant.OutOfResources'><code>OutOfResources</code></td><td><div class='docblock'><p>Failure to allocate resources on the device.</p>
+</div></td></tr><tr><td id='variant.OutOfHostMemory'><code>OutOfHostMemory</code></td><td><div class='docblock'><p>Failure to allocate resources on the host.</p>
+</div></td></tr><tr><td id='variant.Other'><code>Other</code></td><td><div class='docblock'><p>Failure not closer defined.</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a> for <a class='enum' href='../../../collenchyma/frameworks/cuda/enum.Error.html' title='collenchyma::frameworks::cuda::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html' title='std::error::Error'>Error</a> for <a class='enum' href='../../../collenchyma/frameworks/cuda/enum.Error.html' title='collenchyma::frameworks::cuda::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.description' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html#method.description' class='fnname'>description</a>(&amp;self) -&gt; &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.cause' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html#method.cause' class='fnname'>cause</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='trait' href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html' title='std::error::Error'>Error</a>&gt;</code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../../collenchyma/frameworks/cuda/enum.Error.html' title='collenchyma::frameworks::cuda::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "collenchyma";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","Errors than can occur when synchronizing memory."]],"struct":[["SharedMemory","Container that handles synchronization of [Memory][1] of type `T`. [1]: ../memory/index.html"]]});

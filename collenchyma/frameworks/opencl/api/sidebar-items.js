@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","Defines OpenCL errors."]],"mod":[["types","Provides the Foreign Type Interface for OpenCL."]],"struct":[["API","Defines the OpenCL API."]]});

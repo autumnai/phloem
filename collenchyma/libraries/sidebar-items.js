@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","Defines a high-level library Error."]],"mod":[["blas","Provides backend-agnostic BLAS operations."],["numeric_helpers","Describes the Library numeric types and traits."]],"trait":[["Float",""]]});

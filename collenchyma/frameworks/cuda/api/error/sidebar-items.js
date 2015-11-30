@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","Defines OpenCL errors."]]});
