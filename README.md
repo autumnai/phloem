@@ -13,7 +13,7 @@ See the [Documentation](http://autumnai.github.io/phloem)
 If you're using Cargo, just add Leaf to your Cargo.toml:
 
     [dependencies]
-    phloem = "0.2.3"
+    phloem = "0.3.1"
 
 If you're using [Cargo Edit][cargo-edit], you can
 call:
