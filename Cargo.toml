@@ -13,7 +13,7 @@ keywords      = ["machine-learning", "neural-network", "blob", "data"]
 license       = "MIT"
 
 [dependencies]
-collenchyma = "~0.0.3"
+collenchyma = "= 0.0.3"
 
 clippy = { version = "0.0.23", optional = true }
 
